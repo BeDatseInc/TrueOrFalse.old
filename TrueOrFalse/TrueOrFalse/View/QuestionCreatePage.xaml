@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TrueOrFalse.QuestionCreatePage"
+             Padding="10">
+  <Frame BackgroundColor="White">
+    <StackLayout Padding="10" Spacing="20">
+      <Label Text="Custom Phrase: " TextColor="Black"/>
+      <Entry x:Name="PhraseEntry" Placeholder="Type your custom phrase" PlaceholderColor="Silver" TextColor="Black" BackgroundColor="Gray"/>
+      <StackLayout Orientation="Horizontal">
+        <Label Text="Is True? " TextColor="Black"/>
+        <Switch x:Name="SwitchTrue"/>
+      </StackLayout>
+
+      <Button x:Name="SaveButton" Text="Save" Clicked="OnSaveButtonClicked"/>
+      <Button x:Name="DeleteButton" Text="Delete" IsVisible="False" Clicked="OnDeleteButtonClicked"/>
+      <ListView x:Name="PhrasesListView" ItemTapped="PhrasesListView_OnItemTapped"/>
+  
+    </StackLayout>
+  </Frame>
+</ContentPage>

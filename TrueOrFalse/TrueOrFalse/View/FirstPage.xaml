@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:resources="clr-namespace:TrueOrFalse.AppResources;assembly=TrueOrFalse"
+             x:Class="TrueOrFalse.FirstPage"
+             Padding="10"
+             >
+  <Frame BackgroundColor="White" Padding="10">
+    <AbsoluteLayout>
+
+      <BoxView Color="Accent" AbsoluteLayout.LayoutBounds="0.25, 0.19, 0.01, 0.1" AbsoluteLayout.LayoutFlags="All" />
+      <BoxView Color="Accent" AbsoluteLayout.LayoutBounds="0.27, 0.18, 0.01, 0.1" AbsoluteLayout.LayoutFlags="All" />
+      <BoxView Color="Accent" AbsoluteLayout.LayoutBounds="0.29, 0.19, 0.01, 0.1" AbsoluteLayout.LayoutFlags="All" />
+      <BoxView Color="Accent" AbsoluteLayout.LayoutBounds="0.75, 0.18, 0.01, 0.1" AbsoluteLayout.LayoutFlags="All" />
+      <BoxView Color="Accent" AbsoluteLayout.LayoutBounds="0.73, 0.19, 0.01, 0.1" AbsoluteLayout.LayoutFlags="All" />
+      <BoxView Color="Accent" AbsoluteLayout.LayoutBounds="0.71, 0.18, 0.01, 0.1" AbsoluteLayout.LayoutFlags="All" />
+
+      <Label Text="{resources:Translate Tittle}" TextColor="Black" FontSize="Large" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" AbsoluteLayout.LayoutBounds="0.45, 0.15, 1, 0.2 "  AbsoluteLayout.LayoutFlags="All"/>
+
+      <Button Text="  {resources:Translate StartButton}  " AbsoluteLayout.LayoutBounds="0.5, 0.5" AbsoluteLayout.LayoutFlags="PositionProportional" Clicked="Button_OnClicked" />
+      <Image  AbsoluteLayout.LayoutBounds="1, 1" AbsoluteLayout.LayoutFlags="PositionProportional">
+        <Image.Source>
+          <OnPlatform x:TypeArguments="ImageSource"
+                      iOS="ic_add_circle_48pt"
+                      Android="ic_add_circle_black_48dp"
+                      WinPhone="Assets/ic_add_circle_black_48dp" />
+        </Image.Source>
+        <Image.GestureRecognizers>
+          <TapGestureRecognizer Tapped="TapGestureRecognizer_OnPlusButtonTapped"/>
+        </Image.GestureRecognizers>
+      </Image>
+      
+      
+    </AbsoluteLayout>
+  </Frame>
+</ContentPage>

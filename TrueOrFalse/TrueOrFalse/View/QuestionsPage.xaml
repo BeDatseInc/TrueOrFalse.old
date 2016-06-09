@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TrueOrFalse.QuestionsPage"
+             Padding="10"
+             BackgroundColor="Blue"
+             SizeChanged="QuestionsPage_OnSizeChanged">
+  <Frame BackgroundColor="White" Padding="0">
+    <StackLayout Spacing="0">
+      
+      <Label x:Name="QuestionLabel" FontSize="Large" TextColor="Black" VerticalOptions="CenterAndExpand" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+      
+      <StackLayout Orientation="Horizontal" Spacing="0" HorizontalOptions="Start" VerticalOptions="StartAndExpand">
+        
+        <Button x:Name="TrueButton" Text="True" Clicked="Button_OnClicked"/>
+        <Button x:Name="FalseButton" Text="False" Clicked="Button_OnClicked"/>
+        
+      </StackLayout>
+    </StackLayout>
+  </Frame>
+</ContentPage>
